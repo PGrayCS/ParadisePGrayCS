@@ -3,6 +3,7 @@
   deps = [
     pkgs.bash
     pkgs.unzip
+    pkgs.unzip
     pkgs.gcc
     pkgs.curl
     pkgs.make
