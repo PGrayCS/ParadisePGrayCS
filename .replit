@@ -1,8 +1,10 @@
-modules = ["nodejs-20", "python-3.12"]
-run = "dotnet run"
+
+run = "tools/ci/install_byond.sh && DreamMaker paradise.dme && DreamDaemon paradise.dmb -safe -trusted"
+modules = ["bash-0.6:v1"]
 
 [nix]
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "dotnet run"]
+build = ["sh", "-c", "tools/ci/install_byond.sh && DreamMaker paradise.dme"]
+run = ["sh", "-c", "DreamDaemon paradise.dmb -safe -trusted"]
